@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="x_s4bv_discode_ci_metadata" label="CI Table" max_length="40" name="x_s4bv_discode_ci_table" sizeclass="3373" type="collection"/>
+</database>

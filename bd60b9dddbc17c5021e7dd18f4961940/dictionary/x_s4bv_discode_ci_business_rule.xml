@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="x_s4bv_discode_ci_metadata" label="CI Business Rule" max_length="40" name="x_s4bv_discode_ci_business_rule" sizeclass="4729" type="collection">
+        <element dependent="table" dependent_on_field="table" label="Condition" max_length="4000" name="filter_condition" read_only="true" type="conditions" use_dependent_field="true"/>
+        <element label="Table" max_length="80" name="table" read_only="true" type="table_name"/>
+    </element>
+</database>

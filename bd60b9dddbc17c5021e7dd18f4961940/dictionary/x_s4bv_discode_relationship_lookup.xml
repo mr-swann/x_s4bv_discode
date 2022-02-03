@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="dl_matcher" label="Relationship Lookup" max_length="40" name="x_s4bv_discode_relationship_lookup" sizeclass="10" type="collection">
+        <element label="Relationship Type" mandatory="true" max_length="32" name="relationship_type" reference="cmdb_rel_type" type="reference"/>
+        <element label="Type value" mandatory="true" max_length="40" name="type_value" type="string"/>
+        <index name="index">
+            <element name="relationship_type"/>
+        </index>
+        <index name="index2" unique="true">
+            <element name="type_value"/>
+        </index>
+    </element>
+</database>

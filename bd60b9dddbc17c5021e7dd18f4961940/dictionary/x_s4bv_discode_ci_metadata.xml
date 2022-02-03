@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="cmdb_ci" label="CI Application File" max_length="40" name="x_s4bv_discode_ci_metadata" sizeclass="10838" type="collection">
+        <element label="Base sys metadata" max_length="32" name="base_sys_metadata" reference="sys_metadata" type="reference"/>
+        <element label="Condition" max_length="254" name="condition" read_only="true" type="string"/>
+        <element label="Script" max_length="8000" name="script" read_only="true" type="script"/>
+    </element>
+</database>

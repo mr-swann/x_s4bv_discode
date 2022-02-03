@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="x_s4bv_discode_ci_metadata" label="CI UI Action" max_length="40" name="x_s4bv_discode_ci_ui_action" sizeclass="2234" type="collection"/>
+</database>
