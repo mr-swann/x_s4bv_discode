@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action_role">
+    <sys_ui_action_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ui_action_role</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-07-20 22:12:21</sys_created_on>
+        <sys_id>f786cf1cdb6db81021e7dd18f4961945</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Scan Application.x_s4bv_discode.user</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_ui_action display_value="Discode Application">daf5071cdb6db81021e7dd18f4961902</sys_ui_action>
+        <sys_update_name>sys_ui_action_role_f786cf1cdb6db81021e7dd18f4961945</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-07-20 22:12:21</sys_updated_on>
+        <sys_user_role display_value="x_s4bv_discode.user" name="x_s4bv_discode.user">de707ddddbc17c5021e7dd18f496194b</sys_user_role>
+    </sys_ui_action_role>
+</record_update>

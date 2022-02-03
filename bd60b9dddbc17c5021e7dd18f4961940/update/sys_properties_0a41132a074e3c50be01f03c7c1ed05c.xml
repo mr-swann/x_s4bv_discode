@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>sys_id of the default relationship type to use, when no relationship can be found using the lookup</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_s4bv_discode.api.scan.default.relationship</name>
+        <read_roles>x_s4bv_discode.manager</read_roles>
+        <suffix>api.scan.default.relationship</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-21 19:17:48</sys_created_on>
+        <sys_id>0a41132a074e3c50be01f03c7c1ed05c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_s4bv_discode.api.scan.default.relationship</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_properties_0a41132a074e3c50be01f03c7c1ed05c</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-21 19:17:48</sys_updated_on>
+        <type>string</type>
+        <value>4eb3f915db057c5021e7dd18f4961966</value>
+        <write_roles>x_s4bv_discode.admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=0a41132a074e3c50be01f03c7c1ed05c"/>
+</record_update>

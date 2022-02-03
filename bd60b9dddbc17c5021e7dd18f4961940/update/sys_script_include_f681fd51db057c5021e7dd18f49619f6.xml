@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_s4bv_discode.CoreBase</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Core class to extend into all APIs for constants and generic methods</description>
+        <name>CoreBase</name>
+        <script><![CDATA[var CoreBase = Class.create();
+CoreBase.prototype = {
+    initialize: function () {
+        this.arrSourceTableList = this.arrSourceTableList || this._getArrSourceTableList();
+    },
+    /**
+     * Constants for Defaults
+     */
+    C_REL_ID_DEFAULT: gs.getProperty('x_s4bv_discode.api.scan.default.relationship', ''),
+
+    /**
+     * Constants for Tables
+     */
+    C_TBL_METADATA: 'x_s4bv_discode_ci_metadata',
+    C_TBL_SCRIPT_INCLUDE: 'x_s4bv_discode_ci_script_include',
+    C_TBL_BUSINESS_RULE: 'x_s4bv_discode_ci_business_rule',
+    C_TBL_UI_ACTION: 'x_s4bv_discode_ci_ui_action',
+    C_TBL_TABLE: 'x_s4bv_discode_ci_table',
+    C_TBL_ROLE: 'x_s4bv_discode_ci_role',
+    C_TBL_REL_LOOKUP: 'x_s4bv_discode_relationship_lookup',
+
+    /**
+     * Constants for Properties
+     */
+    C_PROP_API_SCAN_SOURCE_TABLE_LIST: 'x_s4bv_discode.api.scan.source.table_list',
+    C_PROP_PREFIX_API_SCAN_SOURCE: 'x_s4bv_discode.api.scan.source.',
+    C_PROP_SCAN_SOURCE_APPLICATIONS: 'x_s4bv_discode.api.scan.source.applications',
+    C_PROP_SCAN_LOG_VERBOSITY: 'x_s4bv_discode.api.scan.log.verbosity',
+    
+    /** 
+     * Constants for Tables and related field mapping (from (target):to (CI))
+     */
+    C_OBJ_TABLEMAP: {
+        'sys_metadata': {
+            'no_scan': true,
+            'table': 'x_s4bv_discode_ci_metadata',
+            fieldmap: [{
+                'name': 'name',
+                'script': 'script'
+            }],
+        },
+        'sys_script_include': {
+            'table': 'x_s4bv_discode_ci_script_include',
+            fieldmap: [{
+                'name': 'name',
+                'script': 'script',
+            }],
+        },
+        'sys_script': {
+            'table': 'x_s4bv_discode_ci_business_rule',
+            fieldmap: [{
+                'name': 'name',
+                'script': 'script',
+                'condition': 'condition',
+                'filter_condition': 'filter_condition',
+            }],
+        },
+        'sys_ui_action': {
+            'table': 'x_s4bv_discode_ci_ui_action',
+            fieldmap: [{
+                'name': 'name',
+                'script': 'script',
+                'condition': 'condition',
+            }],
+        },
+        'sys_db_object': {
+            'table': 'x_s4bv_discode_ci_table',
+            fieldmap: [{
+                'name': 'name'
+            }],
+        },
+        'sys_user_role': {
+            'table': 'x_s4bv_discode_ci_role',
+            fieldmap: [{
+                'name': 'name'
+            }],
+        },
+    },
+
+
+    /**
+     * get the relationship based on the type value provided
+     * @param {String} strTypeValue value of the relationship lookup key
+     * @returns sys_id of the CI relationship
+     */
+    _getRelationshipType: function (strTypeValue) {
+        if (!strTypeValue) return this.C_REL_ID_DEFAULT;
+        var grLookup = new GlideRecord(this.C_TBL_REL_LOOKUP);
+        if (grLookup.get('type_value', strTypeValue)) {
+            return grLookup.getValue('relationship_type');
+        }
+        return this.C_REL_ID_DEFAULT;
+    },
+
+    /**
+     * get a GlideRecord of the CI record for Business Rule
+     * @param {string} id sys_id of the record
+     * @returns GlideRecord of CI, if it exists
+     */
+    _getCiBusinessRule: function (id) {
+        return this._getGr(this.C_TBL_BUSINESS_RULE, id);
+    },
+
+    /**
+     * get a GlideRecord of the CI record for User Role
+     * @param {string} id sys_id of the record
+     * @returns GlideRecord of CI, if it exists
+     */
+    _getCiRole: function (id) {
+        return this._getGr(this.C_TBL_ROLE, id);
+    },
+
+    /**
+     * get a GlideRecord of the CI record for Script Include
+     * @param {string} id sys_id of the record
+     * @returns GlideRecord of CI, if it exists
+     */
+    _getCiScriptInclude: function (id) {
+        return this._getGr(this.C_TBL_SCRIPT_INCLUDE, id);
+    },
+
+    /**
+     * get a GlideRecord of the CI record for UI Action
+     * @param {string} id sys_id of the record
+     * @returns GlideRecord of CI, if it exists
+     */
+    _getCiUiAction: function (id) {
+        return this._getGr(this.C_TBL_UI_ACTION, id);
+    },
+
+    /**
+     * get a GlideRecord of the CI record for Table
+     * @param {string} id sys_id of the record
+     * @returns GlideRecord of CI, if it exists
+     */
+    _getCiTable: function (id) {
+        return this._getGr(this.C_TBL_TABLE, id);
+    },
+
+    /**
+     * get a GlideRecord of the CI record for Application File
+     * @param {string} id sys_id of the record
+     * @returns GlideRecord of CI, if it exists
+     */
+    _getCiMetadata: function (id) {
+        return this._getGr(this.C_TBL_METADATA, id);
+    },
+
+    /**
+     * get a GlideRecord of the specified table
+     * @param {string} strTableName name of table
+     * @param {string} id sys_id of the record
+     * @returns GlideRecord of record, if it exists
+     */
+    _getGr: function (strTableName, id) {
+        var wrGr = new GlideRecord(strTableName);
+        if (!wrGr.get(id)) return;
+        return wrGr;
+    },
+
+    /**
+     * 
+     * @param {string} strSourceTableName name of source table, e.g. sys_script_include
+     * @param {string} sourceId sys_id of the source record (which the CI points to)
+     * @returns GlideRecord of CI record, if it exists
+     */
+    _getGrCiFromSource: function (strSourceTableName, sourceId) {
+        var strTableName = this.C_OBJ_TABLEMAP[strSourceTableName].table || this.C_TBL_METADATA;
+        var grCi = new GlideRecord(strTableName);
+        if (grCi.get('base_sys_metadata', sourceId)) {
+            return grCi;
+        }
+    },
+
+    /**
+     * TODO: no different from _getGr is it ? 
+     * @param {String} strSourceTableName name of source table
+     * @param {String} sourceId sys_id of source record
+     * @returns GlideRecord of the source record
+     */
+    _getGrSource: function (strSourceTableName, sourceId) {
+        var grApplicationFile = new GlideRecord(strSourceTableName);
+        if (grApplicationFile.get(sourceId)) {
+            return grApplicationFile;
+        }
+    },
+
+    /**
+     * If there is an existing CI for the source record, then it will be updated else it will be created
+     * @param {string} strSourceTableName name of source table
+     * @param {string} sourceId sys_id of source record
+     * @returns sys_id of CI record
+     */
+    _createUpdateCiFromSource: function (strSourceTableName, sourceId) {
+        var isExisting = false;
+        var grCi = this._getGrCiFromSource(strSourceTableName, sourceId);
+        if (grCi) {
+            isExisting = true;
+        }
+        var strTableName = this.C_OBJ_TABLEMAP[strSourceTableName].table || this.C_TBL_METADATA;
+        if (!isExisting) {
+            grCi = new GlideRecord(strTableName);
+            grCi.initialize();
+            grCi.setValue('first_discovered', new GlideDateTime()); // first
+        }
+        var arrFieldmap = this.C_OBJ_TABLEMAP[strSourceTableName].fieldmap || [];
+        var grSource = this._getGrSource(strSourceTableName, sourceId);
+        if (!arrFieldmap || !grSource) return;
+
+        grCi.setValue('base_sys_metadata', sourceId); // always
+        grCi.setValue('last_discovered', new GlideDateTime()); // maintain
+
+        for (var i in arrFieldmap) {
+            var objFieldmap = arrFieldmap[i];
+            var arrFieldNameSource = Object.keys(objFieldmap);
+            for (var iField in arrFieldNameSource) {
+                var strFieldNameSource = arrFieldNameSource[iField];
+                var strFieldNameTarget = objFieldmap[strFieldNameSource];
+                grCi.setValue(strFieldNameTarget, grSource.getValue(strFieldNameSource));
+            }
+        }
+        if (isExisting) return grCi.update();
+        return grCi.insert();
+    },
+
+    /**
+     * Get the sys_id of a scope based on the scope name
+     * @param {string} strScopeName 
+     * @returns sys_id of the Application Scope record, if it exists
+     */
+    _getScopeId: function (strScopeName) {
+        if (!strScopeName) return;
+        var grScope = new GlideRecord('sys_scope');
+        if (grScope.get('scope', strScopeName)) return grScope.getUniqueValue();
+        return;
+    },
+
+    /**
+     * 
+     * @returns array list of tables specified
+     */
+         _getArrSourceTableList: function () {
+            var strTableList = gs.getProperty(this.C_PROP_API_SCAN_SOURCE_TABLE_LIST, '');
+            if (!strTableList) return;
+            var arrTableList = strTableList.split(',') || [];
+            this.arrSourceTableList = arrTableList;
+            return arrTableList;
+        },
+
+        /**
+         * 
+         * @param {string} strTableName name of table
+         * @returns boolean - true if tablename is specified in the table list property
+         */
+        _canScanTable: function (strTableName) {
+            if(!strTableName) return false;
+            this.arrSourceTableList = this.arrSourceTableList || this._getArrSourceTableList();
+            return (this.arrSourceTableList.indexOf(strTableName) > -1);
+        },
+
+    type: 'CoreBase'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-06-28 22:03:28</sys_created_on>
+        <sys_id>f681fd51db057c5021e7dd18f49619f6</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>CoreBase</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_script_include_f681fd51db057c5021e7dd18f49619f6</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-09-11 21:27:10</sys_updated_on>
+    </sys_script_include>
+</record_update>

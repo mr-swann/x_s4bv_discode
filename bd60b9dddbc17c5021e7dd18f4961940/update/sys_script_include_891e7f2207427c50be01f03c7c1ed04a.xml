@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_s4bv_discode.ScannerUserRoleBase</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Scanner Strategy Base Class for specific object</description>
+        <name>ScannerUserRoleBase</name>
+        <script><![CDATA[var ScannerUserRoleBase = Class.create();
+ScannerUserRoleBase.prototype = Object.extendsObject(Scanner, {
+    _runScanFromSource: function (grSource) {
+        if(!grSource || !grSource.isValidRecord()) return {};
+            this._scanRoleToTable(grSource);
+            this._scanRoleInheritance(grSource);
+            this._scanRoleToUiAction(grSource);
+    },
+
+    _scanRoleInheritance: function (grSource) {
+        if (!grSource || !(grSource instanceof GlideRecord) || !grSource.isValidRecord()) return;
+        var strClassName = grSource.getTableName(),
+            sourceId = grSource.getUniqueValue();
+        var parentId = this._createUpdateCiFromSource(strClassName, sourceId) + '';
+        var grTarget = new GlideRecord('sys_user_role_contains');
+        grTarget.addQuery('role', sourceId);
+        grTarget.query();
+        while (grTarget.next()) {
+            var targetId = grTarget.getValue('contains');
+            var childId = this._createUpdateCiFromSource(strClassName, targetId) + '';
+            if (parentId && childId && (parentId != childId)) {
+                this._setRelationshipExtend(parentId, childId);
+            }
+            var grRole = grTarget.contains.getRefRecord();
+            if (grRole) {
+                this._scanRoleInheritance(grRole); // recursive
+            }
+        }
+    },
+
+    _scanRoleToTable: function (grSource) {
+        if (!grSource || !(grSource instanceof GlideRecord) || !grSource.isValidRecord()) return;
+        var strClassName = grSource.getTableName(),
+            sourceId = grSource.getUniqueValue();
+        var parentId = this._createUpdateCiFromSource(strClassName, sourceId) + '';
+        var grTarget = new GlideRecord('sys_security_acl_role');
+        grTarget.addQuery('sys_user_role', sourceId);
+        grTarget.addQuery('sys_security_acl.type', 'record');
+        grTarget.query();
+        while (grTarget.next()) {
+            var grAcl = grTarget.sys_security_acl.getRefRecord();
+            var strAclTarget = grAcl.getValue('name');
+            var arrAclTarget = strAclTarget.split('.') || [];
+            var strTargetTableName = arrAclTarget[0] || '';
+            var grTable = this._getGrTableFromName(strTargetTableName);
+            if (!grTable || !grTable.isValidRecord()) continue; // some ACLs are created for tables which do not exist! e.g. sn_vul_ 
+            var tableId = grTable.getUniqueValue();
+            var childId = this._createUpdateCiFromSource('sys_db_object', tableId) + '';
+            if (parentId && childId && (parentId != childId)) {
+                var strRelationshipId = this._getRoleRelationship(grAcl);
+                if (!strRelationshipId) continue;
+                this._setRelationshipAccess(parentId, childId, strRelationshipId);
+            }
+        }
+    },
+
+	_scanRoleToUiAction: function(grSource) {
+        if (!grSource || !(grSource instanceof GlideRecord) || !grSource.isValidRecord()) return;
+        var strClassName = grSource.getTableName(),
+            sourceId = grSource.getUniqueValue();
+        // var strRoleName = grSource.getValue('name'); // TODO : not used
+        var parentId = this._createUpdateCiFromSource(strClassName, sourceId) + '';
+        var grTarget = new GlideRecord('sys_ui_action_role');
+        grTarget.addQuery('sys_user_role', sourceId);
+        grTarget.query();
+        while (grTarget.next()) {
+            var grUiAction = grTarget.sys_ui_action.getRefRecord();
+            var actionId = grUiAction.getUniqueValue();
+            var childId = this._createUpdateCiFromSource('sys_ui_action', actionId) + '';
+            if (parentId && childId && (parentId != childId)) {
+                this._setRelationshipExecute(parentId, childId);
+            }
+        }		
+	},
+
+    _getRoleRelationship: function (grAcl) {
+        if (!grAcl || !(grAcl instanceof GlideRecord) || !grAcl.isValidRecord()) return;
+        var strOperation = grAcl.getValue('operation');
+        switch (strOperation) {
+            case 'create':
+                return this._getRelationshipType('ACCESS_CREATE');
+            case 'read':
+                return this._getRelationshipType('ACCESS_READ');
+            case 'update':
+                return this._getRelationshipType('ACCESS_UPDATE');
+            case 'delete':
+                return this._getRelationshipType('ACCESS_DELETE');
+            case 'execute':
+                return this._getRelationshipType('ACCESS_EXECUTE');
+            default:
+                return this._getRelationshipType('ACCESS');;
+        }
+    },
+    type: 'ScannerUserRoleBase'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-21 22:32:24</sys_created_on>
+        <sys_id>891e7f2207427c50be01f03c7c1ed04a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>ScannerUserRoleBase</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_script_include_891e7f2207427c50be01f03c7c1ed04a</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-26 20:17:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

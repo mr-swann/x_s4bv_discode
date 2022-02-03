@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2022-02-03 21:45:43">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout/>
+        <order/>
+        <read_roles>snc_internal</read_roles>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-27 00:37:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4f9a8a1c071ef090be01f03c7c1ed0be</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>PA Discode - New Tab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_portal_page_4f9a8a1c071ef090be01f03c7c1ed0be</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-09-16 22:11:33</sys_updated_on>
+        <title>PA Discode - New Tab</title>
+        <user/>
+        <view>pa_discode_-_new_tab</view>
+        <related_items_node>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Discode - New Tab">4f9a8a1c071ef090be01f03c7c1ed0be</page>
+                <summary>Discode Application Files by Application</summary>
+                <sys_created_by>w.geek6</sys_created_by>
+                <sys_created_on>2021-08-27 00:37:51</sys_created_on>
+                <sys_id>3bba025c071ef090be01f03c7c1ed054</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>w.geek6</sys_updated_by>
+                <sys_updated_on>2021-08-27 00:37:51</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:51</sys_created_on>
+                        <sys_id>3bba025c071ef090be01f03c7c1ed055</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:51</sys_updated_on>
+                        <value>pie</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:51</sys_created_on>
+                        <sys_id>77ba025c071ef090be01f03c7c1ed055</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:51</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:40:53</sys_created_on>
+                        <sys_id>807b0e5c071ef090be01f03c7c1ed0db</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:40:53</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:40:53</sys_created_on>
+                        <sys_id>807b0e5c071ef090be01f03c7c1ed0dc</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:40:53</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:40:53</sys_created_on>
+                        <sys_id>847b0e5c071ef090be01f03c7c1ed0db</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:40:53</sys_updated_on>
+                        <value>center</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:40:53</sys_created_on>
+                        <sys_id>847b0e5c071ef090be01f03c7c1ed0dc</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:40:53</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:40:53</sys_created_on>
+                        <sys_id>887b0e5c071ef090be01f03c7c1ed0db</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:40:53</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:40:53</sys_created_on>
+                        <sys_id>887b0e5c071ef090be01f03c7c1ed0dc</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:40:53</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:40:53</sys_created_on>
+                        <sys_id>8c7b0e5c071ef090be01f03c7c1ed0da</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:40:53</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:40:53</sys_created_on>
+                        <sys_id>8c7b0e5c071ef090be01f03c7c1ed0db</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:40:53</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:51</sys_created_on>
+                        <sys_id>b3ba025c071ef090be01f03c7c1ed055</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:51</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:51</sys_created_on>
+                        <sys_id>bbba025c071ef090be01f03c7c1ed054</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:51</sys_updated_on>
+                        <value>d75a061c071ef090be01f03c7c1ed02e</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:51</sys_created_on>
+                        <sys_id>fbba025c071ef090be01f03c7c1ed055</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:51</sys_updated_on>
+                        <value>Discode Application Files by Application</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:51">3bba025c071ef090be01f03c7c1ed054</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:51</sys_created_on>
+                        <sys_id>ffba025c071ef090be01f03c7c1ed054</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:51</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+            <sys_portal action="INSERT_OR_UPDATE">
+                <dropzone/>
+                <offset/>
+                <page display_value="PA Discode - New Tab">4f9a8a1c071ef090be01f03c7c1ed0be</page>
+                <summary>Discode Application Files by Class</summary>
+                <sys_created_by>w.geek6</sys_created_by>
+                <sys_created_on>2021-08-27 00:37:45</sys_created_on>
+                <sys_id>96ba025c071ef090be01f03c7c1ed0a8</sys_id>
+                <sys_mod_count>1</sys_mod_count>
+                <sys_updated_by>w.geek6</sys_updated_by>
+                <sys_updated_on>2021-08-27 00:37:46</sys_updated_on>
+                <related_items_node>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>report_type</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:46</sys_created_on>
+                        <sys_id>16ba025c071ef090be01f03c7c1ed0aa</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:46</sys_updated_on>
+                        <value>pie</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>can_subscribe</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:46</sys_created_on>
+                        <sys_id>52ba025c071ef090be01f03c7c1ed0aa</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:46</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>sys_id</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:45</sys_created_on>
+                        <sys_id>9eba025c071ef090be01f03c7c1ed0a8</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:45</sys_updated_on>
+                        <value>4a7a021c071ef090be01f03c7c1ed0cf</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>help_text_window</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:46</sys_created_on>
+                        <sys_id>9eba025c071ef090be01f03c7c1ed0a9</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:46</sys_updated_on>
+                        <value>report_widget_description</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_title</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:41:40</sys_created_on>
+                        <sys_id>a39b069c071ef090be01f03c7c1ed0e1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:41:40</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>publisher_widget</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:41:40</sys_created_on>
+                        <sys_id>a39b069c071ef090be01f03c7c1ed0e2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:41:40</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_header</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:41:40</sys_created_on>
+                        <sys_id>a79b069c071ef090be01f03c7c1ed0e1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:41:40</sys_updated_on>
+                        <value>true</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>subscriber_widget</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:41:40</sys_created_on>
+                        <sys_id>a79b069c071ef090be01f03c7c1ed0e2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:41:40</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title_align</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:41:40</sys_created_on>
+                        <sys_id>ab9b069c071ef090be01f03c7c1ed0e1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:41:40</sys_updated_on>
+                        <value>center</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>filter_indicator</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:41:40</sys_created_on>
+                        <sys_id>ab9b069c071ef090be01f03c7c1ed0e2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:41:40</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>show_border</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:41:40</sys_created_on>
+                        <sys_id>af9b069c071ef090be01f03c7c1ed0e1</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:41:40</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>real_time</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:41:40</sys_created_on>
+                        <sys_id>af9b069c071ef090be01f03c7c1ed0e2</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:41:40</sys_updated_on>
+                        <value>false</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>title</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:46</sys_created_on>
+                        <sys_id>d6ba025c071ef090be01f03c7c1ed0aa</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:46</sys_updated_on>
+                        <value>Discode Application Files by Class</value>
+                    </sys_portal_preferences>
+                    <sys_portal_preferences action="INSERT_OR_UPDATE">
+                        <name>renderer</name>
+                        <portal_section display_value="Created 2021-08-27 01:37:45">96ba025c071ef090be01f03c7c1ed0a8</portal_section>
+                        <sys_created_by>w.geek6</sys_created_by>
+                        <sys_created_on>2021-08-27 00:37:46</sys_created_on>
+                        <sys_id>daba025c071ef090be01f03c7c1ed0a9</sys_id>
+                        <sys_mod_count>0</sys_mod_count>
+                        <sys_updated_by>w.geek6</sys_updated_by>
+                        <sys_updated_on>2021-08-27 00:37:46</sys_updated_on>
+                        <value>com.glide.ui.portal.RenderReport</value>
+                    </sys_portal_preferences>
+                </related_items_node>
+            </sys_portal>
+        </related_items_node>
+    </sys_portal_page>
+</record_update>

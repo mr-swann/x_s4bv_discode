@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_s4bv_discode.ScannerBusinessRuleBase</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Scanner Strategy Base Class for specific object</description>
+        <name>ScannerBusinessRuleBase</name>
+        <script><![CDATA[var ScannerBusinessRuleBase = Class.create();
+ScannerBusinessRuleBase.prototype = Object.extendsObject(Scanner, {
+    _runScanFromSource: function (grSource) {
+        if (!grSource || !grSource.isValidRecord()) return {};
+        this._scanBusinessRuleToScriptInclude(grSource);
+    },
+
+    _scanBusinessRuleToScriptInclude: function (grSource) {
+        if (!grSource || !grSource.isValidRecord()) return;
+        var strClassName = grSource.getTableName(),
+            sourceId = grSource.getUniqueValue();
+        var strSearchString1 = 'new ' + grSource.getValue('name') + '()';
+        var strSearchString2 = 'new ' + grSource.getValue('api_name') + '()';
+        var grBusinessRule = new GlideRecord('sys_script');
+        var grTarget = this._getGrsCallToScriptInclude(grBusinessRule, grSource);
+        if (!grTarget) return;
+        while (grTarget.next()) {
+            var childId = this._createUpdateCiFromSource(strClassName, sourceId) + '';
+            var parentId = this._createUpdateCiFromSource('sys_script', grTarget.getUniqueValue()) + '';
+            if (parentId && childId && (parentId != childId)) {
+                var isFilter = GlideFilter.checkRecord(grTarget, 'conditionLIKE' + strSearchString1) || GlideFilter.checkRecord(grTarget, 'conditionLIKE' + strSearchString2);
+                var isCalled = GlideFilter.checkRecord(grTarget, 'scriptLIKE' + strSearchString1) || GlideFilter.checkRecord(grTarget, 'scriptLIKE' + strSearchString2);
+                if (isFilter)
+                    this._setRelationshipFilter(parentId, childId);
+                if (isCalled)
+                    this._setRelationshipCall(parentId, childId);
+            }
+        }
+    },
+    type: 'ScannerBusinessRuleBase'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-21 22:29:49</sys_created_on>
+        <sys_id>9b7dffee07027c50be01f03c7c1ed0a1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>ScannerBusinessRuleBase</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_script_include_9b7dffee07027c50be01f03c7c1ed0a1</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-26 21:15:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

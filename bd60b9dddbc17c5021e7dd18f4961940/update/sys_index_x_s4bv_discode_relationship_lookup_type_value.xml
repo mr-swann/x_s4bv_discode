@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <col_name_string>type_value</col_name_string>
+        <index_col_name element="type_value" name="x_s4bv_discode_relationship_lookup">afcd07a2074e3c50be01f03c7c1ed026</index_col_name>
+        <logical_table_name>x_s4bv_discode_relationship_lookup</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2021-08-21 19:06:03</sys_created_on>
+        <sys_id>aede4766074e3c50be01f03c7c1ed0ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_s4bv_discode_relationship_lookup</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_index_x_s4bv_discode_relationship_lookup_type_value</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-08-21 19:06:03</sys_updated_on>
+        <table display_value="Relationship Lookup" name="x_s4bv_discode_relationship_lookup">6e1c83a2074e3c50be01f03c7c1ed0c2</table>
+        <unique_index>true</unique_index>
+    </sys_index>
+</record_update>

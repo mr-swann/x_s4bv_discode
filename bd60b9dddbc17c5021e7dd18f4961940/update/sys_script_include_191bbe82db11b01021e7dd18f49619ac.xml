@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_s4bv_discode.ScannerBusinessRule</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Scanner Strategy Class for specific object&#13;
+&#13;
+Override this class</description>
+        <name>ScannerBusinessRule</name>
+        <script><![CDATA[var ScannerBusinessRule = Class.create();
+ScannerBusinessRule.prototype = Object.extendsObject(ScannerBusinessRuleBase, {
+	/** DISCODE Application 
+     * Please override any base functionality here 
+     * ---
+     * All changes will be made to the *Base classes
+     * This will ensure you can easily manage changes to future upgrades
+     * 
+     * Copy existing methods to this file and make changes here
+     * **/
+    
+    type: 'ScannerBusinessRule'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-07-13 21:35:37</sys_created_on>
+        <sys_id>191bbe82db11b01021e7dd18f49619ac</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>ScannerBusinessRule</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_script_include_191bbe82db11b01021e7dd18f49619ac</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-26 19:47:44</sys_updated_on>
+    </sys_script_include>
+</record_update>

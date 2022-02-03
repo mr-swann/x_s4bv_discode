@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Discode">a5d03151db057c5021e7dd18f49619b3</application>
+        <assessment/>
+        <device_type>any</device_type>
+        <filter/>
+        <hint>Open the BSM Map application</hint>
+        <homepage/>
+        <image>images/svg_link.gif</image>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title>View Map</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>20</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>$ngbsm.do</query>
+        <report/>
+        <roles>x_s4bv_discode.user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-27 21:21:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>034762ec079e3490be01f03c7c1ed0e0</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Map</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_app_module_034762ec079e3490be01f03c7c1ed0e0</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-27 21:22:01</sys_updated_on>
+        <timeline_page/>
+        <title>Map</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

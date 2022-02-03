@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDf6dd11d49f5af090d0b0a32b6e377212</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>bd60b9dddbc17c5021e7dd18f4961940</scope_name>
+        <serialized_content>{"FlowDesigner:FDf6dd11d49f5af090d0b0a32b6e377212":{},"FlowDesigner:FDf6dd11d49f5af090d0b0a32b6e377212.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"result\",\"mandatory\":\"false\",\"uiUniqueId\":\"6e951477-ef17-4cfd-9d69-4d904f2679e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDf6dd11d49f5af090d0b0a32b6e377212\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-26 21:21:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>badd11d4075af090be01f03c7c1ed012</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDf6dd11d49f5af090d0b0a32b6e377212</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_complex_object_badd11d4075af090be01f03c7c1ed012</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-26 21:21:44</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>370e0794dbadb81021e7dd18f49619ab</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="cmdb_baseline">
+    <cmdb_baseline action="INSERT_OR_UPDATE">
+        <condition/>
+        <name>Discode</name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-07-20 22:45:41</sys_created_on>
+        <sys_id>370e0794dbadb81021e7dd18f49619ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-07-20 22:45:41</sys_updated_on>
+        <table>x_s4bv_discode_ci_metadata</table>
+    </cmdb_baseline>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-07-20 22:57:13</sys_created_on>
+        <sys_id>3ce0db18dbadb81021e7dd18f49619b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Discode</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_metadata_link_3ce0db18dbadb81021e7dd18f49619b3</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-07-20 22:57:13</sys_updated_on>
+        <tablename>cmdb_baseline</tablename>
+    </sys_metadata_link>
+</record_update>

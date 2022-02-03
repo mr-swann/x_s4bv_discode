@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="cmdb_rel_type">
+    <cmdb_rel_type action="INSERT_OR_UPDATE">
+        <child_descriptor>Accessed by</child_descriptor>
+        <end_point>false</end_point>
+        <name>Has access to::Accessed by</name>
+        <parent_descriptor>Has access to</parent_descriptor>
+        <sys_class_name>cmdb_rel_type</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-07-05 22:36:00</sys_created_on>
+        <sys_id>730cf5ab0741bc50be01f03c7c1ed0f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Has access to::Accessed by</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>cmdb_rel_type_730cf5ab0741bc50be01f03c7c1ed0f2</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-07-05 22:36:00</sys_updated_on>
+    </cmdb_rel_type>
+</record_update>

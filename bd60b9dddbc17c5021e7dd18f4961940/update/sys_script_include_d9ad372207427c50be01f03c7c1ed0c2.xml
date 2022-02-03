@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_s4bv_discode.ScannerScriptIncludeBase</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Scanner Strategy Base Class for specific object</description>
+        <name>ScannerScriptIncludeBase</name>
+        <script><![CDATA[var ScannerScriptIncludeBase = Class.create();
+ScannerScriptIncludeBase.prototype = Object.extendsObject(Scanner, {
+    _runScanFromSource: function (grSource) {
+        if (!grSource || !grSource.isValidRecord()) return {};
+        this._scanScriptIncludeToScriptInclude(grSource);
+        this._scanScriptIncludeToBusinessRule(grSource);
+        this._scanScriptIncludeToUiAction(grSource);
+    },
+
+    _scanScriptIncludeToUiAction: function (grSource) {
+        if (!grSource || !grSource.isValidRecord()) return false;
+        var strClassName = grSource.getTableName(),
+            sourceId = grSource.getUniqueValue();
+        var strSearchString1 = 'new ' + grSource.getValue('name') + '(';
+        var strSearchString2 = 'new ' + grSource.getValue('api_name') + '(';
+        var grTarget = new GlideRecord('sys_ui_action');
+        var grQuery = grTarget.addQuery('script', 'CONTAINS', strSearchString1);
+        grQuery.addOrCondition('script', 'CONTAINS', strSearchString2);
+        grQuery.addOrCondition('condition', 'CONTAINS', strSearchString1);
+        grQuery.addOrCondition('condition', 'CONTAINS', strSearchString2);
+        grTarget.query();
+        while (grTarget.next()) {
+            var childId = this._createUpdateCiFromSource(strClassName, sourceId) + '';
+            var parentId = this._createUpdateCiFromSource('sys_ui_action', grTarget.getUniqueValue()) + '';
+            if (parentId && childId && (parentId != childId)) {
+                var isFilter = GlideFilter.checkRecord(grTarget, 'conditionLIKE' + strSearchString1) || GlideFilter.checkRecord(grTarget, 'conditionLIKE' + strSearchString2);
+                var isCalled = GlideFilter.checkRecord(grTarget, 'scriptLIKE' + strSearchString1) || GlideFilter.checkRecord(grTarget, 'scriptLIKE' + strSearchString2);
+                if (isFilter)
+                    this._setRelationshipFilter(parentId, childId);
+                if (isCalled)
+                    this._setRelationshipCall(parentId, childId);
+            }
+            // TODO: handle recursion better
+            new ScanEngine().scanApplicationFile(grTarget);
+        }
+    },
+
+    _scanScriptIncludeToBusinessRule: function (grSource) {
+        if (!grSource || !(grSource instanceof GlideRecord) || !grSource.isValidRecord()) return;
+        var strClassName = grSource.getTableName(),
+            sourceId = grSource.getUniqueValue(),
+            strApiName = grSource.getValue('api_name'),
+            strApiScript = grSource.getValue('script') || '';
+        var childId = this._createUpdateCiFromSource(strClassName, sourceId) + '';
+        var strApiParentName = this._getApiParentName(strApiScript) || '';
+        var grApiParent = this._getGrFromApiName(strApiParentName);
+        if (grApiParent) {
+            var idApiParent = grApiParent.getUniqueValue() || '';
+            var idApiParentCi = this._createUpdateCiFromSource(strClassName, idApiParent) + '';
+            this._setRelationshipExtend(idApiParentCi, childId);
+            this._scanScriptIncludeToBusinessRule(grApiParent); // Recursive
+        }
+        var strSearchString1 = 'new ' + grSource.getValue('name') + '()';
+        var strSearchString2 = 'new ' + strApiName + '()';
+
+        var grTarget = new GlideRecord('sys_script');
+        var grQuery = grTarget.addQuery('script', 'CONTAINS', strSearchString1);
+        grQuery.addOrCondition('script', 'CONTAINS', strSearchString2);
+        grQuery.addOrCondition('condition', 'CONTAINS', strSearchString1);
+        grQuery.addOrCondition('condition', 'CONTAINS', strSearchString2);
+        grTarget.query();
+        while (grTarget.next()) {
+
+            var parentId = this._createUpdateCiFromSource('sys_script', grTarget.getUniqueValue()) + '';
+            if (parentId && childId && (parentId != childId)) {
+                var isFilter = GlideFilter.checkRecord(grTarget, 'conditionLIKE' + strSearchString1) || GlideFilter.checkRecord(grTarget, 'conditionLIKE' + strSearchString2);
+                var isCalled = GlideFilter.checkRecord(grTarget, 'scriptLIKE' + strSearchString1) || GlideFilter.checkRecord(grTarget, 'scriptLIKE' + strSearchString2);
+                if (isFilter)
+                    this._setRelationshipFilter(parentId, childId);
+                if (isCalled)
+                    this._setRelationshipCall(parentId, childId);
+            }
+            // TODO: handle recursion better
+            new ScanEngine().scanApplicationFile(grTarget);
+        }
+    },
+
+    _scanScriptIncludeToScriptInclude: function (grSource) {
+        var strClassName = grSource.getTableName(),
+            sourceId = grSource.getUniqueValue();
+        var strSearchString1 = 'new ' + grSource.getValue('name') + '()';
+        var strSearchString2 = 'new ' + grSource.getValue('api_name') + '()';
+        var grTarget = new GlideRecord('sys_script_include');
+        grTarget.addQuery('script', 'CONTAINS', strSearchString1).addOrCondition('script', 'CONTAINS', strSearchString2);
+        grTarget.query();
+        while (grTarget.next()) {
+            var parentId = this._createUpdateCiFromSource(strClassName, sourceId) + '';
+            var childId = this._createUpdateCiFromSource('sys_script_include', grTarget.getUniqueValue()) + '';
+            if (parentId && childId && (parentId != childId)) {
+                var isCalled = GlideFilter.checkRecord(grTarget, 'scriptLIKE' + strSearchString1) || GlideFilter.checkRecord(grTarget, 'scriptLIKE' + strSearchString2);
+                if (isCalled)
+                    this._setRelationshipCall(parentId, childId);
+            }
+            // TODO: handle recursion better
+            new ScanEngine().scanApplicationFile(grTarget);
+        }
+    },
+
+
+
+    _getApiParentName: function (strScript) {
+        strScript = strScript || '';
+        var regPattern = this.C_REG_API_PARENT;
+        var arrMatchGroups = regPattern.exec(strScript);
+        var strApiParentName = '';
+        if (arrMatchGroups && arrMatchGroups.length == 3) {
+            strApiParentName = arrMatchGroups[2];
+        }
+        return strApiParentName;
+    },
+
+    _getGrFromApiName: function (strApiName) {
+        var grApi = new GlideRecord('sys_script_include');
+        grApi.addQuery('api_name', strApiName).addOrCondition('name', strApiName);
+        grApi.setLimit(1);
+        grApi.query();
+        if (!grApi.next()) return;
+        if (grApi.getValue('api_name') == 'global.Class') return;
+        return grApi;
+    },
+
+    _getScriptFromApiName: function (strApiName) {
+        return this.__getGrFromApiName(strApiName).getValue('script') || '';
+    },
+
+    type: 'ScannerScriptIncludeBase'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-21 22:30:30</sys_created_on>
+        <sys_id>d9ad372207427c50be01f03c7c1ed0c2</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>ScannerScriptIncludeBase</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_script_include_d9ad372207427c50be01f03c7c1ed0c2</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-09-14 20:47:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

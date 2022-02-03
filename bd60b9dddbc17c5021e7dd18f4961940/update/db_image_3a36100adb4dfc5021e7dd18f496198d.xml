@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>system</category>
+        <format/>
+        <height/>
+        <image>8246100adb4dfc5021e7dd18f4961996</image>
+        <name>Class.svg</name>
+        <size_bytes>3789</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-06-30 23:19:47</sys_created_on>
+        <sys_id>3a36100adb4dfc5021e7dd18f496198d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Class.svg</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>db_image_3a36100adb4dfc5021e7dd18f496198d</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-06-30 23:19:54</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>image</file_name>
+        <hash>6061851aed37a0ee227707681ac023fcc923565385544f6269b95bae085058d4</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>3789</size_bytes>
+        <size_compressed>1417</size_compressed>
+        <state>available</state>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-06-30 23:19:53</sys_created_on>
+        <sys_id>8246100adb4dfc5021e7dd18f4961996</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-06-30 23:19:54</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>3a36100adb4dfc5021e7dd18f496198d</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="8246100adb4dfc5021e7dd18f4961996">8246100adb4dfc5021e7dd18f4961996</sys_attachment>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-06-30 23:19:53</sys_created_on>
+        <sys_id>c246100adb4dfc5021e7dd18f4961996</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>pVdbT2M3EH7elfY/nOatko/x+DK2EXTVRdWy0laqVInXig0pQZsmKITA9tf3GzsBnw0hrfqAj+PLXL75ZsacvH/8a9atJ8u7m8X8dETajLrJfLy4uplfn47uV3/2afT+p3dvT37o++7jZD5ZXq4Wy+Pu56vFl0n3aTa7v1uVpc567bRR3e8XH7tfHm8Xy1X32+z+uv8073RZvKhKjjvWxnQf7m9mV535sev6XuTfra9bM2jU3Vydjj5ffpss/8APWDm/Ox1NV6vb46Ojh4cH/eD0Ynl9ZI0xR7i8OXL8OLuZf33pIOWcj8oujp6OzO3jqPtWv+/evunWN5OHDwvZ6EznTPkTKC6/zCb9l8vx1+vl4n4Ok+aTh25wBnqP724vx5PT0e1ycjdZricj8egaw5uT28vVtMO1X5PVhoNKWedgx1ankJVRQVOMvdWO0mYuI48N1hLXjbJUx7qdpj3paMfljDJ1TcnZzX4RlaD+zdgoURXVswpWz2f4vJr19+hoaG122lpFxuuQ3Rjqsgu90cn43mtih7kLGdrYO4VwWTvrCfsZv8pHjDMQISNt5kHbLE5H7awt1pVdtd11m1nZV2aGX8H3ZVxT0plIHLfWDTyPjeex+la95rpRlrJ63s5Twq6hjQUiqF5r4lDhzvvikJ7jAHPWvSPtic4y48NAIGqbnMo4FDx+wrXs1QDTHcTJZx1THGLuG8xtg7n9n5jb/4z5Qbbtwzy9iPkT+Q+Ang+DTsHqnNwT6hQkOewT7N8BKxbsgs+sY1CEIsaWpuR1RhLuJmlskjRWOxGRPVl6XqUWl/uNrIaxqWXsGTHpEGG9xZ7Blx1CSluT1NDCvQ54VPDI+x1oq0x6wYHYjgccaFMuPjvgEu7EZweqSWpo4a4DxGAgrlNAe+ADbItrWbHTYvkh27gphKkphLEdp7JepFLL5NRweEv012mR1mWJisDDJWbLotQEgRsucfWxCrVnZIEyQJJ0BbUpa0p2C5r6DsRdkDOk4LgXYV5KjE+IEEYr5QYSnY4m9VJcSJXiPpYCJGeyE0Q4JZyhHJVHUrk6n1qnObp/kdvpBW9jmzlIbiiPfoZyQYH7+oHUaATqCCdRCzP3XLKkzlH9qGo3PUhnfXEs91F71MHmzBhKQgplxCGkUvSbH9ZoK4aPIcEEVjJm3A2gjNQVESNFBfCnjS6sZmGKF2CSGJPJC2qguWRpFjC8tEqby6Z4kMqcrfiLg2PsQq4gnoOSk1J8HScp8LiLlkE1AaHYS2SCF+wN82YOMYSbMCd62I8ck2ihXWCM2K9zKb5SopF8pZF4KoU/RNHMvu5/HvJjhz7WBVz0KmYU0iSmC+mMfCGufK0gSJrR9kxPjsX8MovATfZeT9XX3yybdJ6Ss4isXcPabOM5I0opHhQ9EBtfEJsAvyvFYm3R+Tzaq4NoAQR+myAamErr5YDIxBJza0NZz4pBgij5Aiskm0QTqAAmlWxxZSZxEtAk66xEggp90LwkKiXUnynAVHQ3a/xMIJcqGiBckpGlloD7QQQouVJuhzIFSTIS2kBTioVU3hfVti+6S6yrFyV45TGBg1ixfTFf9G/cpr66jdJT0Kj4hEGGc5PhtWrxRYLC6M+sN2CJSlSywqIr2Gg31FFDJu0QrUZUUQygcJgKe9jUR3M61I/3PprPGe8ADhcR5GEIZalvaadocSOYX+iTbbni7YukQrNGkfCUWjvq6fYVk5/aKe99DuR1EfQKswePhzUZ1IniylnIuAnkHOgVFctTKG2BVENcd/Mb7YSDtGp5OTX/ZAjq1eEmrXiQVrlJq0FyTUXKntYQ20Z4ZvG2SQ5djaN0IYVHpw60NUcNravGnxxdlxH/AOL7D/Eu4vnNDgAA</data>
+        <length>1876</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="8246100adb4dfc5021e7dd18f4961996">8246100adb4dfc5021e7dd18f4961996</sys_attachment>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-06-30 23:19:53</sys_created_on>
+        <sys_id>4646100adb4dfc5021e7dd18f4961996</sys_id>
+    </sys_attachment_doc>
+</record_update>

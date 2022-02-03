@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>system</category>
+        <format/>
+        <height/>
+        <image>c7d598c6db4dfc5021e7dd18f49619de</image>
+        <name>Code.svg</name>
+        <size_bytes>450</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-06-30 23:17:53</sys_created_on>
+        <sys_id>88c518c6db4dfc5021e7dd18f49619f9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Code.svg</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>db_image_88c518c6db4dfc5021e7dd18f49619f9</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-06-30 23:18:04</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>image</file_name>
+        <hash>0d956f6fcea1f6ba5c601b563aeedc495c5448d89230f1f0f24a4da19f77a141</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>450</size_bytes>
+        <size_compressed>260</size_compressed>
+        <state>available</state>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-06-30 23:18:03</sys_created_on>
+        <sys_id>c7d598c6db4dfc5021e7dd18f49619de</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2021-06-30 23:18:04</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>88c518c6db4dfc5021e7dd18f49619f9</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="c7d598c6db4dfc5021e7dd18f49619de">c7d598c6db4dfc5021e7dd18f49619de</sys_attachment>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-06-30 23:18:03</sys_created_on>
+        <sys_id>0bd598c6db4dfc5021e7dd18f49619de</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>bZFNboMwEIWvMvKa2jPGhBABUtp1L5BNhQQiSASjxorT23ewTZVF5T/5zff8bLm+P0Z43ubl3oirc+tJKe+99Lm036PSiKiYEPCYBv9un41AQNCGu2hrN7l5aAsjP2w/1Cpu6xGmvhFfSRbQd657W7rb0Ihda+u1c1dg7JN0ps2ZZ+6YETdtsrCVSPm+YKxt7CVYzsRCVDHTwU3IKO0LRg+jF6E4z84/o11gtdPi+K2V1FUOdJAllmBkcTwAaYhqGWsYascwl9KQ2YikUhGY11P+SyET6RhDecSL3ZVSkx6TkiXdofrLfT1pi1IjD/6a9hfjz5CBwgEAAA==</data>
+        <length>336</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="c7d598c6db4dfc5021e7dd18f49619de">c7d598c6db4dfc5021e7dd18f49619de</sys_attachment>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-06-30 23:18:03</sys_created_on>
+        <sys_id>8bd598c6db4dfc5021e7dd18f49619de</sys_id>
+    </sys_attachment_doc>
+</record_update>

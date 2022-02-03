@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-21 18:57:46</sys_created_on>
+        <sys_id>c5fc43e2074e3c50be01f03c7c1ed05f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_s4bv_discode_relationship_lookup.x_s4bv_discode.user</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_security_acl display_value="x_s4bv_discode_relationship_lookup">09fc43e2074e3c50be01f03c7c1ed05c</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_c5fc43e2074e3c50be01f03c7c1ed05f</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-27 00:46:55</sys_updated_on>
+        <sys_user_role display_value="x_s4bv_discode.user" name="x_s4bv_discode.user">de707ddddbc17c5021e7dd18f496194b</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

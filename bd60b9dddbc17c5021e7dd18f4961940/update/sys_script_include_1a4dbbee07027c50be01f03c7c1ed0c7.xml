@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_s4bv_discode.ScannerBase</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Scanner Base Strategy Class containing all baseline application functionality for handling the scanning of specific objects</description>
+        <name>ScannerBase</name>
+        <script><![CDATA[var ScannerBase = Class.create();
+ScannerBase.prototype = Object.extendsObject(Core, {
+    /**
+     * 
+     * @param {GlideRecord} grRecord 
+     * @param {String} strType 
+     */
+    initialize: function (grRecord, strType) {
+        if (grRecord && grRecord.isValidRecord()) {
+            if (strType == 'source') {
+                this.grSource = grRecord;
+            }
+
+        }
+    },
+
+    /**
+     * based on this.grSource, scans will be executed based on the properties defined
+     * @returns result of scan
+     */
+    run: function () {
+        return this._runScan();
+    },
+
+    /**
+     * 
+     * @returns results of scan
+     */
+    _runScan: function () {
+        if (this.grSource) {
+            return this._runScanFromSource(this.grSource);
+        }
+
+    },
+
+    /**
+     * Skeleton function
+     * @param {GlideRecord} grSource 
+     */
+    _runScanFromSource: function (grSource) {
+        /**
+         * Override in the child classes
+         */
+    },
+
+    /**
+     * some constants for REGEX operations which can be reused across scanners
+     * TODO: better way to store and handle REGEX library
+     */
+    C_REG_API_NEW_AJAX: /(var\s+\w+\s+\=\s*new\s+GlideAjax\(\W)(\w+)(\s*\W\s*\W\s*\W)/g,
+    C_REG_API_NEW_CLASS: /(var\s+\w+\s+\=\s*new\s+)(\w+)(\s*\()/g,
+    C_REG_API_PARENT: /(Object.extendsObject\s*\W{1}\s*)(\w+\W?\w+)/g,
+
+
+    /***  
+     * _setRelationship<TYPE>
+     *  structure to reuse and call _setRelationship based on specific function
+     ***/
+    _setRelationshipCall: function (parentId, childId) {
+        var relationshipId = this._getRelationshipType('CALL');
+        return this._setRelationship(parentId, childId, relationshipId);
+    },
+    _setRelationshipExecute: function (parentId, childId) {
+        var relationshipId = this._getRelationshipType('EXECUTE');
+        return this._setRelationship(parentId, childId, relationshipId);
+    },
+    _setRelationshipFilter: function (parentId, childId) {
+        var relationshipId = this._getRelationshipType('FILTER');
+        return this._setRelationship(parentId, childId, relationshipId);
+    },
+    _setRelationshipExtend: function (parentId, childId) {
+        var relationshipId = this._getRelationshipType('EXTEND');
+        return this._setRelationship(parentId, childId, relationshipId);
+    },
+    _setRelationshipAccess: function (parentId, childId, relationshipId /* optional */ ) {
+        if (relationshipId) {
+            return this._setRelationship(parentId, childId, relationshipId);
+        }
+        relationshipId = this._getRelationshipType('ACCESS');
+        return this._setRelationship(parentId, childId, relationshipId);
+    },
+
+    /**
+     * _setRelationship function to check for existing relationship, or create new one
+     * @param {String} parentId sys_id of CI parent
+     * @param {String} childId sys_id of CI child
+     * @param {String} typeId sys_id of CI Relationship Type
+     * @returns sys_id of CI Relationship
+     */
+    _setRelationship: function (parentId, childId, typeId) {
+        if (!parentId || !childId || !typeId || (parentId == childId)) return;
+        var id = this._checkRelationship(parentId, childId, typeId);
+        if (id) return id;
+        var grCiRelationship = new GlideRecord('cmdb_rel_ci');
+        grCiRelationship.initialize();
+        grCiRelationship.setValue('parent', parentId);
+        grCiRelationship.setValue('child', childId);
+        grCiRelationship.setValue('type', typeId);
+        return grCiRelationship.insert();
+    },
+
+    /**
+     * Will check if the relationship already exists, if so, returns the relationshipId
+     * @param {String} parentId sys_id of the parent CI
+     * @param {String} childId sys_id of the child CI
+     * @param {*} typeId sys_id of the CI relationship type
+     * @returns sys_id of the relationship, if it exists, else false
+     */
+    _checkRelationship: function (parentId, childId, typeId) {
+        if (!parentId || !childId || !typeId) return;
+        var grCiRelationship = new GlideRecord('cmdb_rel_ci');
+        grCiRelationship.addQuery('parent', parentId);
+        grCiRelationship.addQuery('child', childId);
+        grCiRelationship.addQuery('type', typeId);
+        grCiRelationship.setLimit(1);
+        grCiRelationship.query();
+        if (grCiRelationship.next()) return grCiRelationship.getUniqueValue();
+        return false;
+    },
+
+    /**
+     * _getGrTableFromName 
+     * @param {String} strTableName name of table
+     * @returns GlideRecord of the sys_db_object if table matches, else false
+     */
+    _getGrTableFromName: function (strTableName) {
+        var grTable = new GlideRecord('sys_db_object');
+        if (grTable.get('name', strTableName))
+            return grTable;
+        return false;
+    },
+
+    /**
+     * _getGrsCallToScriptInclude adds and executes query to grTarget
+     * @param {GlideRecord} grTarget instantiated GR object of target table, not single record
+     * @param {GlideRecord} grScriptInclude 
+     * @returns GlideRecord of grTarget with query, ready for .next()
+     */
+    _getGrsCallToScriptInclude: function (grTarget, grScriptInclude) {
+        if (!grTarget || !grTarget.isValid() || grTarget.isValidRecord()) return false;
+        if (!grScriptInclude || !grScriptInclude.isValidRecord()) return false;
+        if (!grTarget.isValidField('script') || grTarget.isValidField('condition')) return false;
+        var strClassName = grScriptInclude.getTableName(),
+            sourceId = grScriptInclude.getUniqueValue();
+
+        // TODO: this method is inefficient , tidy it up!
+        var strSearchString1 = 'new ' + grScriptInclude.getValue('name') + '(';
+        var strSearchString2 = 'new ' + grScriptInclude.getValue('api_name') + '(';
+
+        var grQuery = grTarget.addQuery('script', 'CONTAINS', strSearchString1);
+        grQuery.addOrCondition('script', 'CONTAINS', strSearchString2);
+        grQuery.addOrCondition('condition', 'CONTAINS', strSearchString1);
+        grQuery.addOrCondition('condition', 'CONTAINS', strSearchString2);
+        grTarget.query();
+
+        return grTarget;
+    },
+
+    type: 'ScannerBase'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-21 22:28:56</sys_created_on>
+        <sys_id>1a4dbbee07027c50be01f03c7c1ed0c7</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>ScannerBase</sys_name>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_script_include_1a4dbbee07027c50be01f03c7c1ed0c7</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-26 20:29:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

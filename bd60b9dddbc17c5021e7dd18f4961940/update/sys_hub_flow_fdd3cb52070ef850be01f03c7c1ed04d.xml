@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="Scanner">3ae28b12070ef850be01f03c7c1ed04a</category>
+        <compiler_build>glide-rome-06-23-2021__patch0-07-07-2021_07-15-2021_1403.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>scan_all_applications</internal_name>
+        <label_cache>[{"name":"3030a319-052a-41ae-ab7f-8e6ae34fe91b.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDa753c352800ef8500653cd33d8d6a712","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"82eab37d-7b6c-4a82-9ba0-d6d417bd0669"}},{"name":"3030a319-052a-41ae-ab7f-8e6ae34fe91b.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"a5abcfd4-9226-4206-b761-f7f2de3622aa"}}]</label_cache>
+        <master_snapshot>67e3cf52070ef850be01f03c7c1ed087</master_snapshot>
+        <name>Scan All Applications</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-20 23:39:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fdd3cb52070ef850be01f03c7c1ed04d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Scan All Applications</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Discode" source="x_s4bv_discode">bd60b9dddbc17c5021e7dd18f4961940</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name>sys_hub_flow_fdd3cb52070ef850be01f03c7c1ed04d</sys_update_name>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-27 00:51:12</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=fdd3cb52070ef850be01f03c7c1ed04d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=fdd3cb52070ef850be01f03c7c1ed04d"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=fdd3cb52070ef850be01f03c7c1ed04d^sys_idNOT INf5d3cb52070ef850be01f03c7c1ed050"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>fdd3cb52070ef850be01f03c7c1ed04d</id>
+        <name>Scan All Applications</name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-20 23:39:27</sys_created_on>
+        <sys_id>f5d3cb52070ef850be01f03c7c1ed050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-20 23:39:27</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="delete_multiple" query="flow=fdd3cb52070ef850be01f03c7c1ed04d^sys_idNOT IN76e3cf52070ef850be01f03c7c1ed01b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Scan All Applications">2b53c352070ef850be01f03c7c1ed005</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>2b53c352070ef850be01f03c7c1ed005</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Scan All Applications">fdd3cb52070ef850be01f03c7c1ed04d</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-20 23:39:48</sys_created_on>
+        <sys_id>76e3cf52070ef850be01f03c7c1ed01b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-26 23:39:17</sys_updated_on>
+        <ui_id>3030a319-052a-41ae-ab7f-8e6ae34fe91b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=76e3cf52070ef850be01f03c7c1ed01b"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=fdd3cb52070ef850be01f03c7c1ed04d^sys_idNOT INabe3cf52070ef850be01f03c7c1ed0a9"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"abe3cf52070ef850be01f03c7c1ed0a9","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Scan All Applications">fdd3cb52070ef850be01f03c7c1ed04d</plan_id>
+        <snapshot>e55dbdd807daf090be01f03c7c1ed04a</snapshot>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-20 23:39:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>abe3cf52070ef850be01f03c7c1ed0a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-20 23:39:52</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="Scanner">3ae28b12070ef850be01f03c7c1ed04a</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>scan_all_applications</internal_name>
+        <label_cache>[{"name":"3030a319-052a-41ae-ab7f-8e6ae34fe91b.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"a5abcfd4-9226-4206-b761-f7f2de3622aa"}},{"name":"3030a319-052a-41ae-ab7f-8e6ae34fe91b.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDa753c352800ef8500653cd33d8d6a712","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"82eab37d-7b6c-4a82-9ba0-d6d417bd0669"}}]</label_cache>
+        <master>true</master>
+        <name>Scan All Applications</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Scan All Applications">fdd3cb52070ef850be01f03c7c1ed04d</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-20 23:39:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>67e3cf52070ef850be01f03c7c1ed087</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-20 23:39:51</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=67e3cf52070ef850be01f03c7c1ed087"/>
+    <sys_variable_value action="delete_multiple" query="document_key=67e3cf52070ef850be01f03c7c1ed087"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=67e3cf52070ef850be01f03c7c1ed087^sys_idNOT IN2fe3cf52070ef850be01f03c7c1ed088"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>67e3cf52070ef850be01f03c7c1ed087</id>
+        <name>Scan All Applications</name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-20 23:39:51</sys_created_on>
+        <sys_id>2fe3cf52070ef850be01f03c7c1ed088</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-20 23:39:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_action_instance action="delete_multiple" query="flow=67e3cf52070ef850be01f03c7c1ed087^sys_idNOT INe3e3cf52070ef850be01f03c7c1ed090"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Scan All Applications">2b53c352070ef850be01f03c7c1ed005</action_type>
+        <action_type_parent display_value="Scan All Applications">91034b12070ef850be01f03c7c1ed0a0</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2b53c352070ef850be01f03c7c1ed005</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Scan All Applications">67e3cf52070ef850be01f03c7c1ed087</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>w.geek6</sys_created_by>
+        <sys_created_on>2021-08-20 23:39:51</sys_created_on>
+        <sys_id>e3e3cf52070ef850be01f03c7c1ed090</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Discode">bd60b9dddbc17c5021e7dd18f4961940</sys_scope>
+        <sys_updated_by>w.geek6</sys_updated_by>
+        <sys_updated_on>2021-08-20 23:39:51</sys_updated_on>
+        <ui_id>3030a319-052a-41ae-ab7f-8e6ae34fe91b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e3e3cf52070ef850be01f03c7c1ed090"/>
+    <sys_hub_flow action="update">
+        <sys_id>fdd3cb52070ef850be01f03c7c1ed04d</sys_id>
+        <latest_snapshot>67e3cf52070ef850be01f03c7c1ed087</latest_snapshot>
+    </sys_hub_flow>
+</record_update>
