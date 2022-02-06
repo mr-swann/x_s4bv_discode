@@ -12,7 +12,7 @@ WARNING: Use at your own risk. You may find things you never knew exist!
 
 Create a copy of the Scanner + ScannerBase APIs and name them according to Discode standard
 
-These must retail their core .run() method 
+These must retain their core .run() method 
 
 Add new API definition to the application properties
 
